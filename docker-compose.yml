@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  server:
+    image: tensorflow/serving
+    volumes:
+      - ./saved_models:/saved_models/1628956907
+    ports:
+      - '8501:8501'
+    environment:
+        MODEL_NAME: 1628956907
+        MODEL_BASE_PATH: /saved_models/
+
+  web:
+    image: flaskweb
+    build:
+        context: .
+        dockerfile: Dockerfile
+    ports:
+      - '8080:8080'
