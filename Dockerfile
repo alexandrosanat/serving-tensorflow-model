@@ -8,4 +8,4 @@ WORKDIR $APP_HOME
 
 COPY . ./
 
-CMD ["python","flask_app/app.py"]
+CMD ["python", "flask_app/app.py"]

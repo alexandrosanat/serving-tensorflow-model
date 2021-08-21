@@ -1,0 +1,6 @@
+FROM tensorflow/serving
+
+ENV APP_HOME /saved_models/1628956907
+WORKDIR $APP_HOME
+
+COPY ./saved_models /saved_models/1628956907
