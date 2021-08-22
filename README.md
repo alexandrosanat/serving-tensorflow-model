@@ -35,6 +35,7 @@ $ minikube service tfweb-load-balancer-service
 - Follow the link provided when the service is run and add /home where the Flask app is served.
 
 
+ ![Alt Text](./images/tf-kube.png)
 
 
 ## Prerequisites:
