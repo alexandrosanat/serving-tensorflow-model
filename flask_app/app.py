@@ -8,6 +8,7 @@ app = Flask(__name__)
 def tfserving_request(req_input, model_name):
     # Use this if using Docker compose
     # url = f"http://server:8501/v1/models/{model_name}:predict"
+    # This is configured to match the kubernetes service: tf-cluster-ip-service
     url = f"http://tf-cluster-ip-service:8501/v1/models/{model_name}:predict"
 
     input_request = {"instances": [req_input]}
