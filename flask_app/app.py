@@ -6,7 +6,9 @@ app = Flask(__name__)
 
 
 def tfserving_request(req_input, model_name):
-    url = f"http://server:8501/v1/models/{model_name}:predict"
+    # Use this if using Docker compose
+    # url = f"http://server:8501/v1/models/{model_name}:predict"
+    url = f"http://tf-cluster-ip-service:8501/v1/models/{model_name}:predict"
 
     input_request = {"instances": [req_input]}
     response = requests.post(url=url, json=input_request)
