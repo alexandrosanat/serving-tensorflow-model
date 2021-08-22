@@ -1,3 +1,4 @@
+# This Dockerfile is used to create the image for the TF Serving application
 FROM tensorflow/serving
 
 ENV APP_HOME /saved_models/1628956907
